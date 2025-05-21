@@ -1,4 +1,4 @@
-from .celery_config import app # Import the Celery app instance
+from celery_config import app # Import the Celery app instance
 import time
 import random
 import os
