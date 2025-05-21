@@ -25,7 +25,3 @@ CMD ["sh", "-c", "echo '---- ENV VARS INSIDE CONTAINER ----' && \
                   echo 'CELERY_RESULT_BACKEND_PORT: ' $CELERY_RESULT_BACKEND_PORT && \
                   echo '-----------------------------------' && \
                   celery -A celery_config.app worker --loglevel=INFO -P solo"]
-
-# Command to run the Celery worker
-# It will pick up broker/backend URLs from environment variables
-CMD ["celery", "-A", "celery_config.app", "worker", "--loglevel=INFO", "-P", "solo"]
